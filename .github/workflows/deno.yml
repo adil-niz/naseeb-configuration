@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write       # ✅ THIS IS THE FIX
+  contents: read
+
 jobs:
   deploy:
     name: Deploy to Deno
