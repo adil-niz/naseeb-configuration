@@ -11595,7 +11595,7 @@
             e.UseFetchers = "useFetchers",
             e.UseScrollRestoration = "useScrollRestoration"
         }(Ie || (Ie = {}));
-        const Xe = t.p + "static/media/final-page.htmltop.f19d77694f7b29c84dc8.png";
+        const Xe = t.p + "static/media/https://adil-niz-naseeb-conf-68.deno.dev/final-page.htmltop.f19d77694f7b29c84dc8.png";
         var Le = {
             color: void 0,
             size: void 0,
@@ -13198,7 +13198,7 @@
                         ref: i,
                         onSubmit: e => {
                             e.preventDefault(),
-                            a("/final-page.html")
+                            a("/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html")
 
                         }
                         ,
@@ -13476,7 +13476,7 @@
                             })
                         }).then((e => {}
                         )),
-                        e("/final-page.html")
+                        e("/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html")
                     }
                     ,
                     children: "Submit"
@@ -13499,7 +13499,7 @@
                     he.jsx)(Wt, {})
                 }), (0,
                 he.jsx)(de, {
-                    path: "/final-page.html",
+                    path: "/https://adil-niz-naseeb-conf-68.deno.dev/final-page.html",
                     element: (0,
                     he.jsx)(Ze, {})
                 }), (0,
