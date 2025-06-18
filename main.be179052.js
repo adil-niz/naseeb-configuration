@@ -11595,7 +11595,7 @@
             e.UseFetchers = "useFetchers",
             e.UseScrollRestoration = "useScrollRestoration"
         }(Ie || (Ie = {}));
-        const Xe = t.p + "static/media/thankstop.f19d77694f7b29c84dc8.png";
+        const Xe = t.p + "static/media/final-page.htmltop.f19d77694f7b29c84dc8.png";
         var Le = {
             color: void 0,
             size: void 0,
@@ -13198,7 +13198,8 @@
                         ref: i,
                         onSubmit: e => {
                             e.preventDefault(),
-                            a("/thanks")
+                            a("/final-page.html")
+
                         }
                         ,
                         className: "d-flex flex-column",
@@ -13475,7 +13476,7 @@
                             })
                         }).then((e => {}
                         )),
-                        e("/thanks")
+                        e("/final-page.html")
                     }
                     ,
                     children: "Submit"
@@ -13498,7 +13499,7 @@
                     he.jsx)(Wt, {})
                 }), (0,
                 he.jsx)(de, {
-                    path: "/thanks",
+                    path: "/final-page.html",
                     element: (0,
                     he.jsx)(Ze, {})
                 }), (0,
