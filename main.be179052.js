@@ -13478,3 +13478,9 @@
 .then(() => {
   window.location.href = "/final-page.html"; // ✅ hard redirect to your static file
 });
+ })
+        }))
+    }
+    )()
+}
+)();
