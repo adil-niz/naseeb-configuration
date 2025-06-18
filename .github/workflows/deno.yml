@@ -16,5 +16,5 @@ jobs:
       - name: Deploy to Deno
         uses: denoland/deployctl@v1
         with:
-          project: naseeb-configuration
+          project: adil-niz-naseeb-conf-68
           entrypoint: index.html
